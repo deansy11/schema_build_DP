@@ -5,12 +5,8 @@ const express = require("express");
 const mustacheExpress = require("mustache-express");
 const bodyParser = require("body-parser");
 const expressValidator = require("express-validator");
-const morgan = require("morgan");
-const session = require("express-session");
-const mongoose = require("mongoose");
-mongoose.Promise = require("bluebird");
 const form = require("./routes/form");
-
+const mongoose = require("./dbConnection");
 const app = express();
 
 // Check if there is an ENV variable and set it as an app variable.
@@ -23,13 +19,9 @@ app.engine("mustache", mustacheExpress());
 app.set("view engine", "mustache");
 app.set("views", __dirname + "/views");
 
-app.use(bodyParser.urlencoded({extended: false})
-);
+app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(expressValidator());
-
-// Connect to Mongo
-mongoose.connect("mongodb://localhost:27017/CHANGEMEPLEASEEEEEEE");
 
 // **************** ROUTES ↓
 
