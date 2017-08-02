@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CHANGEME</title>
+    <link rel="stylesheet" href="/public/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <script src="/public/javascript/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      {{#form}}
+        <form class="userInput" action="index.html" method="post">
+          <input type="text" name="title" placeholder="Input Title Here" value="">
+          <input type="text" name="authorName" placeholder="Author Name" value="">
+          <input type="number" name="issueNumber" placeholder="Issue Number?"value="">
+          <textarea name="summary" rows="4" cols="80" placeholder="Please provide a brief summary here"></textarea>
+          <!--What would go here?  -->
+          <button type="submit" name="button">Submit</button>
+      {{/form}}
+        </form>
+    </main>
+
+    <footer>
+      This page was rendered in {{secondsToRender}}ms.
+    </footer>
+  </body>
+</html>

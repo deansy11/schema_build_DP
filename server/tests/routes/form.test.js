@@ -1,7 +1,7 @@
 const app = require("../../index.js");
 const request = require("supertest");
 
-describe("Homepage router", () => {
+describe("Form router", () => {
   describe("GET /", () => {
     it("will return a status code of 200", () => {
       request(app)
