@@ -12,14 +12,30 @@
       <h2>Add New Book Entry Here</h2>
         <form class="userInput" action="/books" method="post">
           <label for="title">Title</label>
-          <input type="text" name="title" placeholder="Input Title Here" value="">
+          <input type="text" name="title" value="">
+          <br>
           <label for="author">Author</label>
-          <input type="text" name="author" placeholder="Author Name" value="">
+          <input type="text" name="author" value="">
+          <br>
           <label for="issue">Issue Number</label>
           <input type="number" name="issueNumber" value="">
-          <label for=""></label>
-          <textarea name="summary" rows="4" cols="80" placeholder="Please provide a brief summary here"></textarea>
-          <!--What would go here?  -->
+          <br>
+          <br>
+          <label for="">Book Summary</label>
+          <br>
+          <textarea name="summary" rows="3" cols="80" placeholder="Please provide a brief summary here" value="summary"></textarea>
+          <br>
+          <br>
+          <label for="characters">Character Info:</label>
+          <br>
+          <label for="">Name</label>
+          <input type="text" name="character_name" value="" placeholder="Character name">
+          <label for="age">Age</label>
+          <input type="number" name="character_age" value="" placeholder="Character age">
+          <label for="job">Job</label>
+          <input type="text" name="characters_job" value="" placeholder="Character occupation">
+          <button type="button" name="button">Add Another Character</button>
+          <br>
           <button type="submit" name="button">Submit</button>
         </form>
       <h3>Update Existing Entry Here</h3>
