@@ -14,15 +14,18 @@ router.get("/", (req, res) => {
 })
 
 router.post("/books", (req, res) => {
+  console.log(req.body);
   new Book(req.body).save()
-    .then((mongoObj) => {
+    .then((newEntry) => {
       res.send(mongoObj);
-      // res.redirect(`/books/${ mongoObj._id }`)
+      res.redirect(`/${ newEntry._id }`)
       console.log("Post get?");
     })
     .catch(() => {
       console.log("Error");
     });
 });
+
+router.get("")
 
 module.exports = router;

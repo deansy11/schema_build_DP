@@ -5,7 +5,7 @@ const express = require("express");
 const mustacheExpress = require("mustache-express");
 const bodyParser = require("body-parser");
 const expressValidator = require("express-validator");
-const form = require("./routes/form");
+const formRoute = require("./routes/form");
 const mongoose = require("./dbConnection");
 const app = express();
 
@@ -25,8 +25,8 @@ app.use(expressValidator());
 
 // **************** ROUTES ↓
 
-app.use("/", require("./routes/form"));
-app.use("/create", form);
+// app.use("/", form);
+app.use("/", formRoute);
 
 // **************** ROUTES ↑
 
