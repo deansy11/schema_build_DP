@@ -8,7 +8,8 @@ const comicsSchema = new mongoose.Schema({
   characters: [{
     name: String,
     age: Number,
-    job: String
+    job: String,
+    hobbies: String,
  }]
 });
 

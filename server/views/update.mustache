@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comic Book Archive!</title>
+    <link rel="stylesheet" href="/public/stylesheets/normalize.css">
+    <link rel="stylesheet" href="/public/stylesheets/styles.css">
+    <script src="/public/javascript/main.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      {{ #books }}
+      <h2>Book Submission</h2>
+        <form class="" action="/{{ _id }}/update" method="post">
+          <label for="title">Title</label>
+          <input type="text" name="title" value="">
+          <br>
+          <label for="author">Author</label>
+          <input type="text" name="author" value="">
+          <br>
+          <label for="issue">Issue Number</label>
+          <input type="number" name="issueNumber" value="">
+          <br>
+          <br>
+          <label for="">Book Summary</label>
+          <br>
+          <textarea name="summary" rows="3" cols="80" placeholder="Please provide a brief summary here" value="summary"></textarea>
+          <br>
+          <br>
+          <label for="characters">Character Info:</label>
+          <br>
+          <label for="">Name</label>
+          <input type="text" name="character_name" value="" placeholder="Character name">
+          <label for="age">Age</label>
+          <input type="number" name="character_age" value="" placeholder="Character age">
+          <label for="job">Job</label>
+          <input type="text" name="characters_job" value="" placeholder="Character occupation">
+          <button type="button" name="button">Add Another Character</button>
+          <br>
+          <button type="submit" name="button">Submit</button>
+        </form>
+      <h3>Update Existing Entry Here</h3>
+    {{ /books }}
+    </main>
+  </body>
+</html>
